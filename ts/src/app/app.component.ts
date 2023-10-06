@@ -9,6 +9,9 @@ import { Title } from '@angular/platform-browser';
 export class AppComponent implements OnInit {
   title =
     'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP';
+
+  mostrarResumo = false;
+
   constructor(private readonly titleService: Title) {}
 
   ngOnInit(): void {

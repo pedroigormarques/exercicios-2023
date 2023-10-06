@@ -68,3 +68,10 @@ a:hover {
     font-size: 12px;
   }
 }
+
+.resumo-truncate{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

@@ -8,17 +8,19 @@
 <div class="content" role="main">
   <h2 class="text-center mt-3">{{title}}</h2>
 
-  <div class="card card-body d-flex flex-column col-12 my-3">
-    <div class="row">
-      <h3 class="h5 col">Resumo do Trabalho:</h3>
-      <a class="btn btn-primary btn-show-more text-white m-auto me-3 col-auto" role="button" data-bs-toggle="collapse" data-bs-target="#resumeText">
-        ver mais
+  <div id="resumo" class="card col-12 my-3">
+    <div class="card-header h5">Resumo</div>
+    <div class="card-body">
+      <div class="resumo-truncate" [ngStyle]="{'-webkit-line-clamp': mostrarResumo ? '': '3'}">
+        <p>Sint odit corporis necessitatibus dolorem soluta earum dolores esse. Natus atque ducimus officia consequatur sint minus saepe. Magni culpa enim nisi at sunt velit in consectetur iusto. Rem laudantium suscipit voluptatum libero dolore laudantium dolore dignissimos suscipit. Laboriosam nihil distinctio officiis officia delectus voluptates.</p>
+        <p>At maiores suscipit repudiandae. Aut excepturi qui. Magni at libero voluptatum vero quos debitis est porro voluptatibus. Iure sunt placeat.</p>
+        <p>Possimus aliquam ipsam molestias fuga dolorum aliquid. Porro natus neque quibusdam laborum omnis doloribus. Enim tempora inventore aliquam reprehenderit minima. Consequuntur pariatur recusandae sapiente earum tempora quam numquam. Maxime tempora expedita. Laborum doloribus ducimus praesentium ex nam praesentium libero voluptatum.</p>
+        <p>Exercitationem at sed occaecati. Eaque iusto similique explicabo hic earum consequuntur alias porro explicabo. Cupiditate enim molestias earum quas veritatis ab. Vitae incidunt illum fugit iste amet.</p>
+        <p>Numquam impedit occaecati quia beatae id praesentium repellendus natus accusamus. Repudiandae saepe eveniet ipsa. Iste tempore natus deleniti sapiente neque.</p>
+      </div>
+      <a class="btn-show-more" href="#resumo" (click)="mostrarResumo=!mostrarResumo">
+        {{mostrarResumo? 'encolher': 'ver mais'}}
       </a>
-    </div>
-    <p class="col-12">Este é um exemplo de resumo para esse trabalho</p>
-    <div id="resumeText" class="collapse col-12">
-      <h3 class="h5 pt-3">Informações:</h3>
-      <p>Este seria o exemplo do texto completo sobre as informações desse trabalho a ser realizado</p>
     </div>
   </div>
 
