@@ -6,15 +6,26 @@
 </div>
 
 <div class="content" role="main">
-  <h2 class="text-center my-5">{{title}}</h2>
+  <h2 class="text-center mt-3">{{title}}</h2>
+
+  <div class="card card-body d-flex flex-column col-12 my-3">
+    <div class="row">
+      <h3 class="h5 col">Resumo do Trabalho:</h3>
+      <a class="btn btn-primary btn-show-more text-white m-auto me-3 col-auto" role="button" data-bs-toggle="collapse" data-bs-target="#resumeText">
+        ver mais
+      </a>
+    </div>
+    <p class="col-12">Este é um exemplo de resumo para esse trabalho</p>
+    <div id="resumeText" class="collapse col-12">
+      <h3 class="h5 pt-3">Informações:</h3>
+      <p>Este seria o exemplo do texto completo sobre as informações desse trabalho a ser realizado</p>
+    </div>
+  </div>
 
   <!-- Resources -->
   <h2>Informações importantes</h2>
   <p>Os seguintes elementos devem existir no seu aplicativo renderizado (use o inspect):</p>
   <div id="required-elements">
-    <h3>O elemento de expandir resumo precisa ter a classe .btn-show-more</h3>
-    <a href="#" class="btn-show-more">ver mais</a>
-
     <h3>O elemento de criar tópico precisa ter a classe .btn-create-topic</h3>
     <a href="#" class="btn-create-topic">criar tópico</a>
 
