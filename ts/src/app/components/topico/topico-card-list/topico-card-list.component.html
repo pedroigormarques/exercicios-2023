@@ -10,9 +10,13 @@
 
     <p class="card-text conteudo-truncate my-3" [ngStyle]="{'-webkit-line-clamp': exibirTopicoCompleto ? '': '2'}">{{topico.conteudo}}</p>
 
-    <div class="d-flex flex-row align-items-center gap-3">
-      <a class="btn text-primary border-primary rounded">...</a>
-      <input class="btn btn-primary rounded" type="button" value="S2" (click)="adicionarCurtida()">
+    <div class="d-flex flex-row align-items-center gap-2">
+      <a class="btn text-primary rounded p-0">
+        <i class="bi-three-dots-vertical text-primary fs-5"></i>
+      </a>
+      <a class="btn btn-primary rounded py-0 px-2" (click)="adicionarCurtida()">
+        <i class="bi-heart-fill text-white"></i>
+      </a>
       <p class="m-0">{{topico.qtdCurtidas}} like{{topico.qtdCurtidas > 1 ?'s':''}}</p>
       <p class="m-0">{{topico.qtdRespostas}} resposta{{topico.qtdRespostas > 1 ?'s':''}}</p>
     </div>
