@@ -27,7 +27,7 @@
   <div id="discussoes" class="card col-12 my-3">
     <div class="card-header h5">Discussões</div>
     <div class="card-body">
-      <div class="d-flex flex-column align-items-center">
+      <div *ngIf="estadoTopico === 'AcessoInicial'" class="d-flex flex-column align-items-center">
         <h3 class="text-primary text-center h5">Compartilhe suas ideias ou dúvidas com os autores!</h3>
 
         <div class="d-flex col-12 col-md-6 mx-md-auto py-3 justify-content-evenly">
@@ -58,11 +58,16 @@
         <p class="text-center">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
       </div>
 
+      <app-topico-create *ngIf="estadoTopico === 'CriandoTopico'"></app-topico-create>
+
       <div class="position-relative py-3 col-12">
         <hr class="border border-1 opacity-75">
-        <a href="#" class="position-absolute top-50 start-50 translate-middle btn btn-primary btn-create-topic text-white d-flex align-items-center">
+        <a class="position-absolute top-50 start-50 translate-middle btn btn-primary btn-create-topic text-white d-flex align-items-center"
+        *ngIf="estadoTopico !== 'CriandoTopico'"
+        (click)="estadoTopico='CriandoTopico'">
+
           <i class="bi-plus-lg fs-5 pe-1"></i>
-          criar tópico
+          {{ estadoTopico === 'AcessoInicial' ? 'criar tópico':'criar novo tópico'}}
         </a>
       </div>
 
@@ -78,15 +83,6 @@
   <h2>Informações importantes</h2>
   <p>Os seguintes elementos devem existir no seu aplicativo renderizado (use o inspect):</p>
   <div id="required-elements">
-
-    <form>
-      Assunto:
-      <input class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
-      Conteúdo:
-      <!-- <input> -->
-      <button>Enviar</button>
-    </form>
-
     <h3>Após submeter o formulário, a seguinte mensagem deve ser exibida: Aguardando feedback dos autores</h3>
   </div>
 </div>

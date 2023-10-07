@@ -1,0 +1,23 @@
+<div>
+  <p class="text-center">Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores</p>
+
+  <form #formDir="ngForm" [formGroup]="topicoForm" (ngSubmit)="criarTopico()" class="d-flex flex-wrap">
+    <div class="col-12 mb-3">
+      <label for="assunto" class="form-label text-primary fw-bold">Assunto:</label>
+      <input type="text" class="subject form-control rounded-0" name="assunto" formControlName="assunto"
+        placeholder="Defina um tópico sucinto para notificar os autores..."
+        [ngClass]="{'is-invalid':topicoForm.get('assunto')!.invalid}"
+      >
+    </div>
+    <div class="col-12">
+      <label for="conteudo" class="form-label text-primary fw-bold">Conteúdo:</label>
+      <textarea class="form-control rounded-0" name="conteudo" formControlName="conteudo"
+        [ngClass]="{'is-invalid':topicoForm.get('conteudo')!.invalid}">
+      </textarea>
+    </div>
+
+    <div class="col-12 bg-secondary-subtle border-1 d-flex justify-content-end">
+      <button class="btn btn-primary px-5 rounded-0" type="submit" [disabled]="!formDir.valid">Enviar</button>
+    </div>
+  </form>
+</div>

@@ -13,6 +13,9 @@ export class AppComponent implements OnInit {
 
   mostrarResumo = false;
 
+  estadoTopico: 'AcessoInicial' | 'CriandoTopico' | 'TopicoCriado' =
+    'AcessoInicial';
+
   topicos: Topico[] = [
     {
       id: 1,
