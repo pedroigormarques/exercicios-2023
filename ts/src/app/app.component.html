@@ -60,6 +60,12 @@
 
       <app-topico-create (topicoEmmiter)="exibirNovoTopicoCriado($event)" *ngIf="estadoTopico === 'CriandoTopico'"></app-topico-create>
 
+      <div *ngIf="estadoTopico === 'TopicoCriado'" class="d-flex flex-column align-items-center">
+        <h3 class="text-primary text-center h5">Seu tópico foi enviado com sucesso! :D</h3>
+        <p class="text-center py-1">Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+        <a class="btn btn-link text-primary text-decoration-underline text-center my-3">Descubra outros trabalhos!</a>
+      </div>
+
       <div class="position-relative py-3 col-12">
         <hr class="border border-1 opacity-75">
         <a class="position-absolute top-50 start-50 translate-middle btn btn-primary btn-create-topic text-white d-flex align-items-center"

@@ -36,6 +36,7 @@ export class AppComponent implements OnInit {
   }
 
   exibirNovoTopicoCriado(topico: Topico): void {
+    this.estadoTopico = 'TopicoCriado';
     this.topicosCriados.push(topico);
   }
 }
