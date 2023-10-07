@@ -1,0 +1,11 @@
+<div class="card card-body p-3 rounded-0 border-start-0 border-end-0" [ngClass]="{'bg-light': marcacaoEspecial}">
+  <div class="card-title d-flex col-12 flex-nowrap align-items-center">
+    <p class="col fw-bold m-0">
+      <small>{{comentario.autor}}</small>
+    </p>
+    <span class="fw-bold text-primary">{{marcacaoEspecial}}</span>
+    <i *ngIf="marcacaoEspecial" class="bi-check2-all text-primary fs-5 ps-2"></i>
+  </div>
+
+  <p class="card-text conteudo-formatacao">{{comentario.conteudo}}</p>
+</div>

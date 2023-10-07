@@ -22,4 +22,10 @@
     </div>
   </div>
 
+  <div *ngIf="exibirTopicoCompleto" class="comments-container">
+    <app-comentario-card-list *ngFor="let comentario of comentarios"
+      [comentario]="comentario"
+      [marcacaoEspecial]="gerarMarcacaoComentario(comentario)">
+    </app-comentario-card-list>
+  </div>
 </div>
