@@ -1,0 +1,21 @@
+<div class="card card-body p-0 shadow">
+  <div [id]="'topico'+topico.id" class="answered-topic p-3">
+    <a class="h6 card-title text-decoration-none text-primary ops-topic-subject"
+       [href]="'#topico'+topico.id" (click)="alternarExibicaoTopico()">
+      {{topico.assunto}}
+    </a>
+    <p class="card-subtitle text-body-secondary">
+      <small>{{topico.autor}}</small>
+    </p>
+
+    <p class="card-text conteudo-truncate my-3" [ngStyle]="{'-webkit-line-clamp': exibirTopicoCompleto ? '': '2'}">{{topico.conteudo}}</p>
+
+    <div class="d-flex flex-row align-items-center gap-3">
+      <a class="btn text-primary border-primary rounded">...</a>
+      <input class="btn btn-primary rounded" type="button" value="S2" (click)="adicionarCurtida()">
+      <p class="m-0">{{topico.qtdCurtidas}} like{{topico.qtdCurtidas > 1 ?'s':''}}</p>
+      <p class="m-0">{{topico.qtdRespostas}} resposta{{topico.qtdRespostas > 1 ?'s':''}}</p>
+    </div>
+  </div>
+
+</div>

@@ -1,3 +1,4 @@
+import { Topico } from './interfaces/topico/topico';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
@@ -11,6 +12,18 @@ export class AppComponent implements OnInit {
     'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP';
 
   mostrarResumo = false;
+
+  topicos: Topico[] = [
+    {
+      id: 1,
+      assunto: 'Assunto da pergunta aparece aqui',
+      conteudo:
+        'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo?',
+      autor: 'Pedro Igor Marques',
+      qtdCurtidas: 1,
+      qtdRespostas: 0,
+    },
+  ];
 
   constructor(private readonly titleService: Title) {}
 

@@ -63,6 +63,9 @@
         <a href="#" class="position-absolute top-50 start-50 translate-middle btn btn-primary btn-create-topic text-white">criar tópico</a>
       </div>
 
+      <div class="d-flex flex-column gap-3">
+        <app-topico-card-list *ngFor="let topico of topicos" [topico]="topico"></app-topico-card-list>
+      </div>
     </div>
   </div>
 
@@ -72,13 +75,8 @@
   <h2>Informações importantes</h2>
   <p>Os seguintes elementos devem existir no seu aplicativo renderizado (use o inspect):</p>
   <div id="required-elements">
-    <!-- <h3>O elemento de criar tópico precisa ter a classe .btn-create-topic</h3>
-    <a href="#" class="btn-create-topic">criar tópico</a> -->
 
     <h3>O card que contém um tópico respondido precisa ter a classe .answered-topic, o assunto do tópico deve ter a classe .ops-topic-subject</h3>
-    <div class="answered-topic">
-      <h4 class="ops-topic-subject">Título do tópico</h4>
-    </div>
     <div class="comments-container">
       Os comentários de um tópico devem estar encapsulados num elemento com a classe .comments-container
     </div>
