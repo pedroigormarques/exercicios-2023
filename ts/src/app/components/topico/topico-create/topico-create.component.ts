@@ -8,7 +8,7 @@ import { Topico } from 'src/app/interfaces/topico/topico';
   styleUrls: ['./topico-create.component.scss'],
 })
 export class TopicoCreateComponent implements OnInit {
-  @Output() submitEmitter: EventEmitter<Topico> = new EventEmitter();
+  @Output() topicoEmmiter: EventEmitter<Topico> = new EventEmitter();
 
   topicoForm!: FormGroup;
 
@@ -36,6 +36,6 @@ export class TopicoCreateComponent implements OnInit {
       qtdRespostas: 0,
     };
 
-    this.submitEmitter.emit(topicoCriado);
+    this.topicoEmmiter.emit(topicoCriado);
   }
 }

@@ -9,6 +9,7 @@ import { Topico } from 'src/app/interfaces/topico/topico';
 })
 export class TopicoCardListComponent implements OnInit {
   @Input() topico!: Topico;
+  @Input() aguardandoFeedback: boolean = false;
   exibirTopicoCompleto = false;
 
   comentarios?: Comentario[];

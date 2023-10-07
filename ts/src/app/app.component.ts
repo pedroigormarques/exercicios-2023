@@ -27,10 +27,15 @@ export class AppComponent implements OnInit {
       qtdRespostas: 0,
     },
   ];
+  topicosCriados: Topico[] = [];
 
   constructor(private readonly titleService: Title) {}
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
+  }
+
+  exibirNovoTopicoCriado(topico: Topico): void {
+    this.topicosCriados.push(topico);
   }
 }

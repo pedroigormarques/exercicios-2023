@@ -58,7 +58,7 @@
         <p class="text-center">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
       </div>
 
-      <app-topico-create *ngIf="estadoTopico === 'CriandoTopico'"></app-topico-create>
+      <app-topico-create (topicoEmmiter)="exibirNovoTopicoCriado($event)" *ngIf="estadoTopico === 'CriandoTopico'"></app-topico-create>
 
       <div class="position-relative py-3 col-12">
         <hr class="border border-1 opacity-75">
@@ -72,17 +72,9 @@
       </div>
 
       <div class="d-flex flex-column gap-3">
+        <app-topico-card-list *ngFor="let novoTopico of topicosCriados" [topico]="novoTopico" [aguardandoFeedback]="true"></app-topico-card-list>
         <app-topico-card-list *ngFor="let topico of topicos" [topico]="topico"></app-topico-card-list>
       </div>
     </div>
-  </div>
-
-
-
-  <!-- Resources -->
-  <h2>Informações importantes</h2>
-  <p>Os seguintes elementos devem existir no seu aplicativo renderizado (use o inspect):</p>
-  <div id="required-elements">
-    <h3>Após submeter o formulário, a seguinte mensagem deve ser exibida: Aguardando feedback dos autores</h3>
   </div>
 </div>

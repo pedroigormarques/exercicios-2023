@@ -1,5 +1,5 @@
-<div class="card card-body p-0 shadow">
-  <div [id]="'topico'+topico.id" class="answered-topic p-3">
+<div class="card card-body p-0 shadow rounded">
+  <div [id]="'topico'+topico.id" class="answered-topic p-3" [ngStyle]="{'filter': aguardandoFeedback? 'blur(5px)' : ''}">
     <a class="h6 card-title text-decoration-none text-primary ops-topic-subject"
        [href]="'#topico'+topico.id" (click)="alternarExibicaoTopico()">
       {{topico.assunto}}
@@ -10,7 +10,7 @@
 
     <p class="card-text conteudo-truncate my-3" [ngStyle]="{'-webkit-line-clamp': exibirTopicoCompleto ? '': '2'}">{{topico.conteudo}}</p>
 
-    <div class="d-flex flex-row align-items-center gap-2">
+    <div *ngIf="!aguardandoFeedback" class="d-flex flex-row align-items-center gap-2">
       <a class="btn text-primary rounded p-0">
         <i class="bi-three-dots-vertical text-primary fs-5"></i>
       </a>
@@ -20,6 +20,12 @@
       <p class="m-0">{{topico.qtdCurtidas}} like{{topico.qtdCurtidas > 1 ?'s':''}}</p>
       <p class="m-0">{{topico.qtdRespostas}} resposta{{topico.qtdRespostas > 1 ?'s':''}}</p>
     </div>
+  </div>
+
+  <div *ngIf="aguardandoFeedback" class="feedback-mask rounded bg-secondary bg-opacity-25 d-flex flex-column justify-content-center align-items-center">
+    <i class="bi-check2-all fs-5"></i>
+    <p class="h5">Aguardando feedback dos autores</p>
+    <a class="btn btn-link text-primary text-decoration-underline">Editar tópico</a>
   </div>
 
   <div *ngIf="exibirTopicoCompleto" class="comments-container">
