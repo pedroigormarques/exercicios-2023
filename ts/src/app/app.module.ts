@@ -9,6 +9,7 @@ import { TopicoCreateComponent } from './components/topico/topico-create/topico-
 import { VideoComponent } from './components/auxiliares/video/video.component';
 import { RodapeComponent } from './components/gerais/rodape/rodape.component';
 import { CabecalhoComponent } from './components/gerais/cabecalho/cabecalho.component';
+import { MenuLateralComponent } from './components/gerais/menu-lateral/menu-lateral.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CabecalhoComponent } from './components/gerais/cabecalho/cabecalho.comp
     VideoComponent,
     RodapeComponent,
     CabecalhoComponent,
+    MenuLateralComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],

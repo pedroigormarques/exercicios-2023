@@ -1,0 +1,12 @@
+.rotaAtiva{
+  border-left: 0.25rem solid blue;
+}
+
+.rota{
+  padding: 0.25rem 1rem;
+  border-bottom: 2px solid rgba(var(--bs-primary-rgb));
+}
+
+.rota:hover,.rotaAtiva{
+ background-color: var(--bs-primary-bg-subtle);
+}
