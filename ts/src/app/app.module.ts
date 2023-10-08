@@ -6,6 +6,7 @@ import { TopicoCardListComponent } from './components/topico/topico-card-list/to
 import { ComentarioCardListComponent } from './components/comentario/comentario-card-list/comentario-card-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopicoCreateComponent } from './components/topico/topico-create/topico-create.component';
+import { VideoComponent } from './components/auxiliares/video/video.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { TopicoCreateComponent } from './components/topico/topico-create/topico-
     TopicoCardListComponent,
     ComentarioCardListComponent,
     TopicoCreateComponent,
+    VideoComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],

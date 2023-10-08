@@ -8,6 +8,14 @@
 <div class="content" role="main">
   <h2 class="text-center mt-3">{{title}}</h2>
 
+  <app-video
+    [titulo]="title"
+    [nomeAutor]="'Beatriz Christiane Melo'"
+    [instituicaoAutor]="'FCA / Universidade Estadual de Campinas'"
+    [iconeAutorSrc]="'./../assets/iconeUsuario.png'"
+    [videoSrc]="'./../assets/imagemVideo.png'"
+  ></app-video>
+
   <div id="detalhes" class="card col-12 my-3">
     <div class="card-header h5">Detalhes</div>
     <div class="card-body overflow-auto">

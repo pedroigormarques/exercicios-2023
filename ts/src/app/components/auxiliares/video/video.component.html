@@ -1,0 +1,13 @@
+<div class="col-12 position-relative">
+  <img class="img-fluid" [src]="videoSrc"  alt="area para vídeo">
+  <div *ngIf="exibirMascara" class="video-mask bg-primary bg-opacity-50 p-4 d-flex flex-column justify-content-between" (click)="rodarVideo()">
+    <p class="h4 text-white">{{titulo}}</p>
+    <div class="d-flex flex-nowrap gap-3 py-3">
+      <img class="rounded-circle border border-2 border-primary" width="80px" [src]="iconeAutorSrc" alt="icone do autor">
+      <div class="d-flex flex-column">
+        <p class="title h4 text-white">{{nomeAutor}}</p>
+        <p class="title h6 text-white">{{instituicaoAutor}}</p>
+      </div>
+    </div>
+  </div>
+</div>
