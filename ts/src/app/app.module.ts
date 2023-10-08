@@ -7,6 +7,7 @@ import { ComentarioCardListComponent } from './components/comentario/comentario-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopicoCreateComponent } from './components/topico/topico-create/topico-create.component';
 import { VideoComponent } from './components/auxiliares/video/video.component';
+import { RodapeComponent } from './components/gerais/rodape/rodape.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { VideoComponent } from './components/auxiliares/video/video.component';
     ComentarioCardListComponent,
     TopicoCreateComponent,
     VideoComponent,
+    RodapeComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],
