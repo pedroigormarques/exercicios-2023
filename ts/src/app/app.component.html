@@ -6,58 +6,66 @@
 </div>
 
 <div class="content" role="main">
-  <h2 class="text-center mt-3">{{title}}</h2>
+  <div class="row">
+    <h2 class="text-primary h5 col-8">{{title}}</h2>
 
-  <div class="d-flex flex-column">
-    <div class="d-flex flex-nowrap gap-3">
-      <a class="btn btn-primary text-white rounded px-2">
-        <i class="bi-download text-white"></i> Download
-      </a>
-      <a class="btn btn-primary rounded px-2">
-        <i class="bi-star-fill text-white"></i>
-      </a>
-      <a class="btn btn-primary rounded px-2">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAABmJLR0QA/wD/AP+gvaeTAAABcElEQVQ4jaWTMUtbYRSG3zeNUm3p7h+wLh0K4tqhY7ZSuvsb/AEBC8EM3SsEx5DZQaElU3GwLZQ6iLgK4io0NYRrng49V79ccuMlnume837nOe/5kk8qCaAJDJmMIdAs65kG6VAtOsVeF0B/JD2rPFka2H6eJ7US0LGkfUnjB2Bfo2/C0V5hhUbURzPW/BhnNoC9FFaMKrBr4AnwHUCS6sB2YvJU0lrJSn1JdUlvIn8hKUsMbefTfxbWrifO+kUq8As4iu+dcDqqSVqwvR7CCfDX9t1E229DuwTOovZ6ivOF9NdclPRK0hKwFeVxaA1JK5JeAqsl13D/17A9Suq7Bf0wOXc+C5YB7+OgbVvSIHH8wfY40QR8msLKBLTiAr8Am8A34AD4DNyG9gNoAO+Ai6hd8f/p/Y68lU+izHrVsO38TrqPZHWl5KEDN5KezgG6sb08AZsTOLS9lCe1VAmhVxHUS0EzA2gDWeFxZ0C7rOcf1RqfkS0oG+MAAAAASUVORK5CYII=">
-      </a>
+    <div class="d-flex flex-column align-items-end gap-2 col-4">
+      <div class="d-flex flex-nowrap gap-3">
+        <a class="btn btn-primary text-white rounded px-2">
+          <i class="bi-download text-white"></i> Download
+        </a>
+        <a class="btn btn-primary rounded px-2">
+          <i class="bi-star-fill text-white"></i>
+        </a>
+        <a class="btn btn-primary rounded px-2">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAABmJLR0QA/wD/AP+gvaeTAAABcElEQVQ4jaWTMUtbYRSG3zeNUm3p7h+wLh0K4tqhY7ZSuvsb/AEBC8EM3SsEx5DZQaElU3GwLZQ6iLgK4io0NYRrng49V79ccuMlnume837nOe/5kk8qCaAJDJmMIdAs65kG6VAtOsVeF0B/JD2rPFka2H6eJ7US0LGkfUnjB2Bfo2/C0V5hhUbURzPW/BhnNoC9FFaMKrBr4AnwHUCS6sB2YvJU0lrJSn1JdUlvIn8hKUsMbefTfxbWrifO+kUq8As4iu+dcDqqSVqwvR7CCfDX9t1E229DuwTOovZ6ivOF9NdclPRK0hKwFeVxaA1JK5JeAqsl13D/17A9Suq7Bf0wOXc+C5YB7+OgbVvSIHH8wfY40QR8msLKBLTiAr8Am8A34AD4DNyG9gNoAO+Ai6hd8f/p/Y68lU+izHrVsO38TrqPZHWl5KEDN5KezgG6sb08AZsTOLS9lCe1VAmhVxHUS0EzA2gDWeFxZ0C7rOcf1RqfkS0oG+MAAAAASUVORK5CYII=">
+        </a>
+      </div>
+      <a class="fw-bold m-0 p-0" href="#">COMO CITAR ESSE TRABALHO?</a>
     </div>
-    <a class="fw-bold m-0 p-0" href="#">COMO CITAR ESSE TRABALHO?</a>
   </div>
 
-  <app-video
-    [titulo]="title"
-    [nomeAutor]="'Beatriz Christiane Melo'"
-    [instituicaoAutor]="'FCA / Universidade Estadual de Campinas'"
-    [iconeAutorSrc]="'./../assets/iconeUsuario.png'"
-    [videoSrc]="'./../assets/imagemVideo.png'"
-  ></app-video>
+  <div class="row my-3 position-relative">
+    <div class="col-8">
+      <app-video
+      [titulo]="title"
+      [nomeAutor]="'Beatriz Christiane Melo'"
+      [instituicaoAutor]="'FCA / Universidade Estadual de Campinas'"
+      [iconeAutorSrc]="'./../assets/iconeUsuario.png'"
+      [videoSrc]="'./../assets/imagemVideo.png'"
+      ></app-video>
+    </div>
 
-  <div id="detalhes" class="card col-12 my-3">
-    <div class="card-header h5">Detalhes</div>
-    <div class="card-body overflow-auto">
-      <p>Tipo de apresentação: <span class="fw-bold">Pôster</span></p>
-      <p>Eixo temático: <span class="fw-bold">Alimentação e saúde (AS)</span></p>
-      <p>Palavras-chaves: <span class="fw-bold">Alimentos funcionais, alimentação escolar.</span></p>
+    <div class="col-4 position-absolute h-100 end-0">
+      <div id="detalhes" class="card h-100">
+        <div class="card-header h5 bg-primary-subtle">Detalhes</div>
+        <div class="card-body overflow-auto">
+          <p>Tipo de apresentação: <span class="fw-bold">Pôster</span></p>
+          <p>Eixo temático: <span class="fw-bold">Alimentação e saúde (AS)</span></p>
+          <p>Palavras-chaves: <span class="fw-bold">Alimentos funcionais, alimentação escolar.</span></p>
 
-      <div class="py-3">
-        <p class="fw-bold">Autores:</p>
-        <p>Galileo Galilei<sup>1</sup></p>
-        <p>Berta Lange de Morretes<sup>2</sup></p>
-        <p>Isaac Newton<sup>3</sup></p>
-        <p>Cesar Lattes<sup>1</sup></p>
-        <p>Stephen Hawking<sup>4</sup></p>
+          <div class="py-3">
+            <p class="fw-bold">Autores:</p>
+            <p>Galileo Galilei<sup>1</sup></p>
+            <p>Berta Lange de Morretes<sup>2</sup></p>
+            <p>Isaac Newton<sup>3</sup></p>
+            <p>Cesar Lattes<sup>1</sup></p>
+            <p>Stephen Hawking<sup>4</sup></p>
+          </div>
+
+          <small class="text-muted">
+            <p><sup>1</sup>Universidade Estadual de Campinas</p>
+            <p><sup>2</sup>Universidade de São Paulo</p>
+            <p><sup>3</sup>Instituto Nacional de Pesquisas Espaciais</p>
+            <p><sup>4</sup>Universidade Federal do Rio de Janeiro</p>
+          </small>
+        </div>
       </div>
-
-      <small class="text-muted">
-        <p><sup>1</sup>Universidade Estadual de Campinas</p>
-        <p><sup>2</sup>Universidade de São Paulo</p>
-        <p><sup>3</sup>Instituto Nacional de Pesquisas Espaciais</p>
-        <p><sup>4</sup>Universidade Federal do Rio de Janeiro</p>
-      </small>
     </div>
   </div>
 
   <div id="resumo" class="card col-12 my-3">
-    <div class="card-header h5">Resumo</div>
+    <div class="card-header h5 bg-primary-subtle">Resumo</div>
     <div class="card-body">
       <div class="resumo-truncate" [ngStyle]="{'-webkit-line-clamp': mostrarResumo ? '': '3'}">
         <p>Sint odit corporis necessitatibus dolorem soluta earum dolores esse. Natus atque ducimus officia consequatur sint minus saepe. Magni culpa enim nisi at sunt velit in consectetur iusto. Rem laudantium suscipit voluptatum libero dolore laudantium dolore dignissimos suscipit. Laboriosam nihil distinctio officiis officia delectus voluptates.</p>
@@ -73,7 +81,7 @@
   </div>
 
   <div id="discussoes" class="card col-12 my-3">
-    <div class="card-header h5">Discussões</div>
+    <div class="card-header h5 bg-primary-subtle">Discussões</div>
     <div class="card-body">
       <div *ngIf="estadoTopico === 'AcessoInicial'" class="d-flex flex-column align-items-center">
         <h3 class="text-primary text-center h5">Compartilhe suas ideias ou dúvidas com os autores!</h3>
