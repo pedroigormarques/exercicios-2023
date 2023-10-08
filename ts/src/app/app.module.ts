@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopicoCreateComponent } from './components/topico/topico-create/topico-create.component';
 import { VideoComponent } from './components/auxiliares/video/video.component';
 import { RodapeComponent } from './components/gerais/rodape/rodape.component';
+import { CabecalhoComponent } from './components/gerais/cabecalho/cabecalho.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RodapeComponent } from './components/gerais/rodape/rodape.component';
     TopicoCreateComponent,
     VideoComponent,
     RodapeComponent,
+    CabecalhoComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],
