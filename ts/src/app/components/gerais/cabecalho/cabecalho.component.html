@@ -7,13 +7,15 @@
     </div>
 
     <div class="col-auto dropdown">
-      <a class="btn btn-outline-primary dropdown-toggle" href="#" data-bs-toggle="dropdown">
-        <i class="bi-globe text-black"></i> {{idiomaSelecionada | uppercase}}
+      <a class="btn btn-outline-primary" href="#">
+        <i class="bi-globe text-black"></i>
+        {{idiomaSelecionada | uppercase}}
+        <i class="bi-caret-down-fill" style="font-size: 0.7rem;"></i>
       </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" (click)="alterarIdioma('pt-br')" href="#">Português (Brasil)</a></li>
-        <li><a class="dropdown-item" (click)="alterarIdioma('en')" href="#">Inglês</a></li>
-      </ul>
+      <div class="dropdown-content">
+        <a class="btn btn-light shadow-sm rounded-1 text-start" (click)="alterarIdioma('pt-br')" href="#">Português (Brasil)</a>
+        <a class="btn btn-light shadow-sm rounded-1 text-start" (click)="alterarIdioma('en')" href="#">Inglês</a>
+      </div>
     </div>
 
     <div class="col-auto d-flex justify-content-end align-items-center gap-1">
