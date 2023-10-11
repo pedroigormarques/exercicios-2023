@@ -6,6 +6,9 @@ Só serão considerados para correção testes em que as verificações do Githu
 
 
 # Tecnologias
+## Dart
+Nesse caso você deve implementar um protótipo de alta fidelidade no figma de uma tela para você implementar em Flutter, [veja detalhes aqui](https://github.com/chuva-inc/exercicios-2023/tree/master/dart/).
+
 ## PHP
 Em PHP você deve implementar o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-2023/tree/master/php/src/WebScrapping).
 
@@ -18,10 +21,14 @@ Ficou com alguma dúvida? Crie uma issue nesse repo com a sua dúvida :)
 ## Posso resolver mais de um exercício?
 Sim, pode resolver em todos se quiser, e vamos levar todas as resoluções em consideração!
 
+## Tenho que resolver todos os exercícios?
+Não, você pode resolver só um, dois, ou todos.
+
 ## Como entregar os exercícios?
 
 Para entregar os exercícios:
 
 1. Crie um fork **público** deste repositório.
 2. Enquanto programa sua solução, faça [commits atômicos](https://en.wikipedia.org/wiki/Atomic_commit).
-3. Quando estiver tudo passando nos testes, nos envie o link do seu repositório.
+3. Quando estiver tudo passando nos testes, grave o vídeo explicando sua resolução.
+4. Nos envie o link do seu repositório pelo formulário que te enviamos.
